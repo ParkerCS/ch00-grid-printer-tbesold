@@ -120,5 +120,46 @@ Another example: print_grid2(5,3):
 |       |       |       |       |       |
 |       |       |       |       |       |
 + - - - + - - - + - - - + - - - + - - - +
+
+
+#Part 1
+for i in range(2):
+        print("+" + (" - - - -" + " +"), ("- - - -" + " +"))
+        for i in range(4):
+               x = "|" + ("         ")
+               print(3 * x)
+print("+" + (" - - - -" + " +"), ("- - - -" + " +"))
+
+
+#part 2
+
+def print_grid(y):
+        for i in range(2):
+                print("+ " + ("- " * y + " +"), ("- " * y + " +"))
+                for i in range(y):
+                        x = "|" + (" " * (y + 1) * 2)
+                        print(3 * x)
+        print("+ " + ("- " * y + " +"), ("- " * y + " +"))
+
+print_grid(7)
+
 '''
-print("test")
+
+
+def print_grid(units, length, width):
+        for i in range(length):
+                #print("+ " + ("- " * units + " +"), ("- " * units + " +"))
+                tom = "- " * units + "+ "
+                print("+ " + width * tom)
+
+
+                for i in range(units):
+                        x = "|" + (" " * (units + 1) * 2)
+                        print((width + 1) * x)
+
+        #print("+ " + ("- " * units + " +"), ("- " * units + " +"))
+        print(width * ("+ " + ("- " * units)))
+
+
+
+print_grid(8, 12, 4)
