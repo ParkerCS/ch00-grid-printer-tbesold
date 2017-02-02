@@ -145,7 +145,8 @@ print_grid(7)
 
 '''
 
-
+#Part 3
+#this one isnt configured correctly and I cant really figure out how to get it perfect. This is as close as I can get
 def print_grid(units, length, width):
         for i in range(length):
                 #print("+ " + ("- " * units + " +"), ("- " * units + " +"))
