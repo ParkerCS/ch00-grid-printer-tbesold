@@ -1,3 +1,9 @@
+# Graded and fixed a couple items.
+# You had some spacing issues with your horizontal.
+# You needed an end = " " statement to fix
+# I added the "+" at end, also with end = "+" statement in print
+
+
 '''
 Grid Printer Exercise
 Printing a Grid (adapted from Downey, “Think Python”, ex. 3.5)
@@ -155,12 +161,13 @@ def print_grid(units, length, width):
 
 
                 for i in range(units):
-                        x = "|" + (" " * (units + 1) * 2)
+                        x = "|" + ("  " * units) + " "
                         print((width + 1) * x)
 
         #print("+ " + ("- " * units + " +"), ("- " * units + " +"))
-        print(width * ("+ " + ("- " * units)))
+        print(width * ("+ " + ("- " * units)), end = "+")
 
 
 
-print_grid(8, 12, 4)
+
+print_grid(8, 4, 4)
